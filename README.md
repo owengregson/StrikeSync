@@ -22,7 +22,7 @@ However, both the animation and hit registration are carried out by StrikeSync.
 
 ## API
 Since async listener occurs outside of the main thread, we provide a separate event for cancelling StrikeSync's hit-registration.
-To do this, you can use and hook into the `AsyncHitRegistrationEvent`. Remember, though, that your listener is invoked asynchronously,
+To do this, you can use and hook into the `AsyncHitRegisterEvent`. Remember, though, that your listener is invoked asynchronously,
 therefore you may NOT safely write to the Bukkit API or perform other actions which must occur on the main thread. See Bukkit documentation
 for more information on this.
 
@@ -33,7 +33,7 @@ class WorldGuardListener implements Listener {
     WorldGuardPlugin wg = (WorldGuardPlugin) Bukkit.getServer().getPluginManager().getPlugin("WorldGuard");
 
     @EventHandler
-    public void AsyncHitRegistrationEvent(AsyncHitRegistrationEvent e) {
+    public void AsyncHitRegisterEvent(AsyncHitRegisterEvent e) {
         Player damager = e.getDamager();
         Damageable entity = e.getEntity();
         World world = damager.getWorld();
