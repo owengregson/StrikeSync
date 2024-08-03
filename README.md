@@ -46,7 +46,8 @@ class WorldGuardListener implements Listener {
         }
     }
 
-}```
+}
+```
 
 ## Notes
 Back in 2016, another GitHub user by the name of frash23 attempted to implement a similar asynchronous hit processing technique in his plugin SmashHit.
